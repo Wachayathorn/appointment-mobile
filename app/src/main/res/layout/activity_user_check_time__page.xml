@@ -1,0 +1,2887 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundcolor"
+    tools:context=".UserCheckTime_Page">
+
+    <include
+        android:id="@+id/toolbar_1"
+        layout="@layout/toolbar"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"></include>
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/toolbar_1"
+        android:layout_alignLeft="@+id/toolbar_1"
+        android:layout_alignTop="@+id/toolbar_1"
+        android:layout_alignEnd="@+id/toolbar_1"
+        android:layout_alignRight="@+id/toolbar_1"
+        android:layout_alignBottom="@+id/toolbar_1"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/modern"
+        android:text="ตรวจสอบเวลาว่าง"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1" />
+
+    <Spinner
+        android:id="@+id/spChooseCheckTimeUser"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/spinnerbackground"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_1"
+        app:layout_constraintWidth_percent="0.65"></Spinner>
+
+    <TextView
+        android:id="@+id/textCurrentWeek"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/modern"
+        android:text="เวลา"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spChooseCheckTimeUser"
+        app:layout_constraintWidth_percent="1" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView24"
+        app:layout_constraintWidth_percent="1">
+
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TableLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="#f1f1f1" />
+
+                <TableRow
+                    android:layout_width="375dp"
+                    android:layout_height="wrap_content"
+                    android:background="#B9EBC6">
+
+                    <TextView
+                        android:layout_width="62dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/modern"
+                        android:gravity="center"
+                        android:text="วัน/เวลา"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="#f1f1f1" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/modern"
+                        android:gravity="center"
+                        android:text="จันทร์"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="#f1f1f1" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/modern"
+                        android:gravity="center"
+                        android:text="อังคาร"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="#f1f1f1" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/modern"
+                        android:gravity="center"
+                        android:text="พุธ"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="#f1f1f1" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/modern"
+                        android:gravity="center"
+                        android:text="พฤหัสบดี"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="2dp"
+                        android:layout_height="50dp"
+                        android:background="#f1f1f1" />
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/modern"
+                        android:gravity="center"
+                        android:text="ศุกร์"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="12dp"
+                        android:textStyle="bold" />
+                </TableRow>
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+
+                        <TableLayout
+                            android:layout_width="375dp"
+                            android:layout_height="wrap_content">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="9.00            -            9.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri1"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="9.15            -            9.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri2"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="9.30            -            9.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri3"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="9.45            -          10.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri4"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="10.00            -          10.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri5"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="10.15            -          10.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri6"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="10.30            -          10.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri7"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="10.45            -          11.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri8"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="11.00            -          11.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri9"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="11.15            -          11.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri10"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="11.30            -          11.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri11"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="11.45            -          12.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon12"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue12"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed12"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu12"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri12"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="12.00            -          12.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon13"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue13"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed13"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu13"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri13"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="12.15            -          12.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon14"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue14"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed14"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu14"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri14"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="12.30            -          12.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon15"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue15"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed15"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu15"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri15"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="12.45            -          13.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon16"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue16"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed16"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu16"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri16"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="13.00            -          13.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon17"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue17"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed17"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu17"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri17"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="13.15            -          13.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon18"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue18"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed18"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu18"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri18"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="13.30            -          13.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon19"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue19"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed19"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu19"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri19"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="13.45            -          14.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon20"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue20"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed20"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu20"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri20"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="14.00            -          14.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon21"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue21"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed21"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu21"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri21"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="14.15            -          14.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon22"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue22"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed22"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu22"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri22"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="14.30            -          14.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon23"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue23"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed23"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu23"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri23"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="14.45            -          15.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon24"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue24"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed24"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu24"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri24"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="15.00            -          15.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon25"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue25"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed25"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu25"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri25"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="15.15            -          15.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon26"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue26"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed26"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu26"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri26"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="15.30            -          15.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon27"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue27"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed27"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu27"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri27"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="15.45            -          16.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon28"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue28"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed28"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu28"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri28"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="16.00            -          16.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon29"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue29"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed29"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu29"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri29"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="16.15            -          16.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon30"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue30"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed30"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu30"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri30"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="16.30            -          16.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon31"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue31"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed31"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu31"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri31"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="16.45            -          17.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon32"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue32"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed32"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu32"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri32"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="17.00            -          17.15"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon33"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue33"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed33"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu33"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri33"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="17.15            -          17.30"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon34"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue34"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed34"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu34"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri34"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="17.30            -          17.45"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon35"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue35"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed35"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu35"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri35"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="62dp"
+                                    android:layout_height="50dp"
+                                    android:background="#B9EBC6"
+                                    android:gravity="center"
+                                    android:text="17.45            -          18.00"
+                                    android:textAlignment="center"
+                                    android:textColor="#000000"
+                                    android:textSize="12dp" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timemon36"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timetue36"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timewed36"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timethu36"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+
+                                <View
+                                    android:layout_width="2dp"
+                                    android:layout_height="50dp"
+                                    android:background="#f1f1f1" />
+
+                                <TextView
+                                    android:id="@+id/timefri36"
+                                    android:layout_width="60dp"
+                                    android:layout_height="50dp"
+                                    android:background="#3333" />
+                            </TableRow>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="#f1f1f1" />
+
+
+                        </TableLayout>
+
+                    </RelativeLayout>
+
+                </ScrollView>
+
+            </TableLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/modern"
+        android:text="สีขาว : เวลาว่าง / สีแดง : ไม่ว่าง"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textCurrentWeek"
+        app:layout_constraintWidth_percent="1" />
+
+</android.support.constraint.ConstraintLayout>

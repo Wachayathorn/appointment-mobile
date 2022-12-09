@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#387262</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#387262</color>
+
+    <color name="NoFreeTime">#F50404</color>
+    <color name="FreeTime">#3333</color>
+
+    <color name="Accept">#387262</color>
+    <color name="Decline">#E00303</color>
+    <color name="Default">#BDE9C1</color>
+
+    <color name="Spots">#D0FAD8</color>
+    <color name="cardview">#66E9FFE1</color>
+</resources>

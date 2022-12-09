@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.appointment">
+
+    <application
+        android:name=".keepLogin"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Appointment"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".NewsUser"
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".AppointmentUser_Page"
+            android:label="@string/title_activity_appointment_user__page"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PopUp"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.popDetail" />
+        <activity
+            android:name=".TeacherUpdateTime_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherAccept_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TeacherApp_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".StatusAppUser_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserCheckTime_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ProfileUser_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeTeacher_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".HomeUser_Page"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Splashpage"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="app_channel" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/applogo" />
+    </application>
+
+</manifest>

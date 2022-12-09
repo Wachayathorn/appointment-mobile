@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Appointment</string>
+    <string name="title_activity_appoint_user__page">AppointUser_Page</string>
+    <string name="tab_text_1">อาจารย์</string>
+    <string name="tab_text_2">ฝ่ายธุรการ</string>
+    <string name="tab_text_3">ฝ่ายบริการ</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <!--<string name="hello_blank_fragment">Hello blank fragment</string>-->
+
+    <string-array name="spTopic">
+        <item></item>
+        <item>ปรึกษาการลงทะเบียนเรียน</item>
+        <item>ปรึกษาด้านรายวิชา</item>
+        <item>ด้านเอกสาร</item>
+        <item>ปรึกษาเรื่องอื่นๆ</item>
+    </string-array>
+
+    <string-array name="spDeclineReason">
+        <item></item>
+        <item>ติดราชการ</item>
+        <item>ติดประชุม</item>
+        <item>ลา</item>
+        <item>ไม่สะดวกในเวลานี้</item>
+    </string-array>
+
+    <string-array name="spTime">
+        <item></item>
+        <item>9:00 น - 9:15 น</item>
+        <item>9:15 น - 9:30 น</item>
+        <item>9:30 น - 9:45 น</item>
+        <item>9:45 น - 10:00 น</item>
+        <item>10:00 น - 10:15 น</item>
+        <item>10:15 น - 10:30 น</item>
+        <item>10:30 น - 10:45 น</item>
+        <item>10:45 น - 11:00 น</item>
+        <item>11:00 น - 11:15 น</item>
+        <item>11:15 น - 11:30 น</item>
+        <item>11:30 น - 11:45 น</item>
+        <item>11:45 น - 12:00 น</item>
+        <item>12:00 น - 12:15 น</item>
+        <item>12:15 น - 12:30 น</item>
+        <item>12:30 น - 12:45 น</item>
+        <item>12:45 น - 13:00 น</item>
+        <item>13:00 น - 13:15 น</item>
+        <item>13:15 น - 13:30 น</item>
+        <item>13:30 น - 13:45 น</item>
+        <item>13:45 น - 14:00 น</item>
+        <item>14:00 น - 14:15 น</item>
+        <item>14:15 น - 14:30 น</item>
+        <item>14:30 น - 14:45 น</item>
+        <item>14:45 น - 15:00 น</item>
+        <item>15:00 น - 15:15 น</item>
+        <item>15:15 น - 15:30 น</item>
+        <item>15:30 น - 15:45 น</item>
+        <item>15:45 น - 16:00 น</item>
+        <item>16:00 น - 16:15 น</item>
+        <item>16:15 น - 16:30 น</item>
+        <item>16:30 น - 16:45 น</item>
+        <item>16:45 น - 17:00 น</item>
+        <item>17:00 น - 17:15 น</item>
+        <item>17:15 น - 17:30 น</item>
+        <item>17:30 น - 17:45 น</item>
+        <item>17:45 น - 18:00 น</item>
+    </string-array>
+
+    <string-array name="spTopicManage">
+        <item></item>
+        <item>แบบคำร้องทั่วไป</item>
+        <item>การเพิ่ม/ถอนรายวิชา</item>
+        <item>การเทียบโอน/ยกเว้นรายวิชา</item>
+        <item>การลาพักการศึกษา</item>
+        <item>การขึ้นทะเบียนบัณฑิต</item>
+        <item>การขอเอกสารการศึกษา</item>
+        <item>การขอแบบลงทะเบียน/ชำระค่าลงทะเบียนล่าช้า</item>
+        <item>การขอลงทะเบียน Regrade</item>
+        <item>การขอแบบคำร้องการลา</item>
+        <item>การขอแก้ไขระดับคะแนนไม่สมบูรณ์ (I)</item>
+        <item>การขอลงทะเบียนเรียนแทนรายวิชาที่มีค่าระดับคะแนน (F)</item>
+        <item>การขอใบคำร้องขออนุญาตสอบ</item>
+        <item>ขอคำปรึกษาทั่วไป</item>
+        <item>อื่นๆ</item>
+    </string-array>
+
+    <string-array name="spWan">
+        <item></item>
+        <item>จันทร์</item>
+        <item>อังคาร</item>
+        <item>พุธ</item>
+        <item>พฤหัสบดี</item>
+        <item>ศุกร์</item>
+    </string-array>
+    <string name="title_activity_appointment_user__page">AppointmentUser_Page</string>
+</resources>
